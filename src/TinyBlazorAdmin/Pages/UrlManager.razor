@@ -11,9 +11,11 @@
 <h1>URL Manager</h1>
 <h3>Create, Edit and Archive Short URLs</h3>
 
-<p>When creating new short URLs, keep the following in mind:</p>
+<p>This site is not yet mobile friendly. Please use the desktop version for now.</p>
 
-<p>Vanity refers to the 'end' part of the URL, or rather, what you want to have after https://interactiv.ly/. For example, if you want to create the Short URL: https://interactiv.ly/cloudmove, the Vanity would be <b>cloudmove</b>.</p>
+<p>Vanity refers to the 'end' part of the URL, or rather, what you want to have after https://interactiv.ly/.</p>
+
+<p>For example, if you want to create the Short URL: <a href="https://interactiv.ly/cloudmove">https://interactiv.ly/cloudmove</a>, the Vanity would be <b>cloudmove</b>.</p>
 
 @if (UrlList == null)
 {
@@ -48,7 +50,7 @@ else
                 </GridColumn>
                 <GridColumn Field=@nameof(ShortUrlEntity.Title) HeaderText="Title" ></GridColumn>
                 <GridColumn Field=@nameof(ShortUrlEntity.Url) HeaderText="Url" ></GridColumn>
-                <GridColumn Field=@nameof(ShortUrlEntity.Clicks) HeaderText="Clicks" >
+                <GridColumn Width="80" Field=@nameof(ShortUrlEntity.Clicks) HeaderText="Clicks" >
                     <Template>
                         @{
                             var url = (context as ShortUrlEntity);
